@@ -1,0 +1,22 @@
+{
+    "run_command": "npm run start",
+    "policy": {
+        "allowed_outbound_ips": [
+            "127.0.0.1",
+            "8.8.8.8"
+        ],
+        "blocked_paths": [
+            "passwd"
+        ],
+        "allowed_commands": [
+            "ls",
+            "node",
+            "npm",
+            "sh",
+            "next",
+            "bash",
+            "env",
+            "node_modules/.bin/next"
+        ]
+    }
+}
