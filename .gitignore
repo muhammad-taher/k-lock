@@ -1,0 +1,9 @@
+# macOS junk
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# K-Lock Build Artifacts
+dist/rce_guard
+dist/rce_core.o
+*.o
