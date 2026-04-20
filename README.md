@@ -1,5 +1,6 @@
 # 🔐 K-Lock  
-## eBPF-Powered RCE Guard
+## 🛡️ Your Application May Fall to a Zero-Day. Your Server Won't.
+Stop reverse shells, unauthorized binaries, and data exfiltration at the kernel level—even after an attacker achieves full Remote Code Execution.
 
 K-Lock is a high-performance, kernel-level runtime security tool designed to protect Linux applications from **Remote Code Execution (RCE)**.
 
