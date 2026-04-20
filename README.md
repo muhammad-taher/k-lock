@@ -66,7 +66,7 @@ sudo apt install -y clang llvm libelf-dev libbpf-dev libc6-dev-i386 zlib1g-dev
 
 ```bash
 git clone <your-repo-url>
-cd K-Lock_Source-main
+cd k-lock
 make
 ```
 
@@ -95,11 +95,23 @@ dist/config.json
 
 ```json
 {
-    "run_command": "/usr/bin/node /home/ubuntu/my-project/server.js",
+    "run_command": "/usr/bin/node /home/taher/Projects/vulnerable-react-server/node_modules/.bin/next start /home/taher/Projects/vulnerable-react-server -H 0.0.0.0",
     "policy": {
-        "allowed_outbound_ips": ["127.0.0.1", "8.8.8.8"],
-        "blocked_paths": ["passwd", "shadow", ".env"],
-        "allowed_commands": ["node", "npm", "ls", "sh"]
+        "allowed_outbound_ips": [
+            "127.0.0.1"
+        ],
+        "blocked_paths": [
+            "passwd",
+            "shadow",
+            ".env",
+            "id_rsa"
+        ],
+        "allowed_commands": [
+            "node",
+            "npm",
+            "next",
+            "node_modules/.bin/next"
+        ]
     }
 }
 ```
@@ -201,6 +213,16 @@ This ensures violations are prevented — not merely logged.
 ---
 
 ## 📜 License
+
+
+# 👤 Author
+
+**Md. Abu Taher Shekh**
+
+📧 Email: [taherkng83@gmail.com](mailto:taherkng83@gmail.com)
+🐙 GitHub: [muhammad-taher](https://github.com/muhammad-taher)
+
+---
 
 This project is licensed under the **GNU General Public License (GPL)**.
 
