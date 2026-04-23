@@ -67,6 +67,13 @@ int handle_fork(struct trace_event_raw_sched_process_fork *ctx) {
     return 0;
 }
 
+SEC("tp/sched/sched_process_exit")
+int handle_exit(void *ctx) {
+    __u32 pid = bpf_get_current_pid_tgid() >> 32;
+    bpf_map_delete_elem(&protected_pids, &pid);
+    return 0;
+}
+
 SEC("lsm/bprm_check_security")
 int BPF_PROG(restrict_exec, struct linux_binprm *bprm) {
     if (!is_protected()) return 0;
