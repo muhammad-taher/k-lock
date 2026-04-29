@@ -1,22 +1,32 @@
 {
-    "run_command": "npm run start",
+    "run_command": "/usr/bin/node /home/taher/Projects/vulnerable-react-server/node_modules/.bin/next start /home/taher/Projects/vulnerable-react-server -H 0.0.0.0",
     "policy": {
         "allowed_outbound_ips": [
             "127.0.0.1",
-            "8.8.8.8"
+            "8.8.8.8",
+            "100.126.101.45",
+            "192.168.1.109"
         ],
         "blocked_paths": [
             "passwd"
         ],
         "allowed_commands": [
-            "ls",
+	        "ls",
+	        "nc",
+	        "cat",
+	        "touch",
             "node",
             "npm",
-            "sh",
             "next",
-            "bash",
-            "env",
-            "node_modules/.bin/next"
+            "node_modules/.bin/next",
+            "python",
+            "python3",
+            "echo",
+            "curl"
+        ],
+        "allowed_write_files": [
+            ".txt",
+            "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"
         ]
     }
 }
